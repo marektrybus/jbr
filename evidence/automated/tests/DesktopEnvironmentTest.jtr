@@ -1,0 +1,117 @@
+#Test Results (version 2)
+#Sun Nov 08 10:40:16 CET 2026
+#-----testdescription-----
+$file=/Users/marek.trybus/workspace_small/jbr/suite/DesktopEnvironmentTest.java
+$root=/Users/marek.trybus/workspace_small/jbr
+keywords=headful othervm
+library=/suite/lib
+maxTimeout=120
+run=USER_SPECIFIED build Gallery GalleryTestSupport\nUSER_SPECIFIED main/othervm/timeout\=120 DesktopEnvironmentTest\n
+source=DesktopEnvironmentTest.java
+title=Record the actual AWT desktop environment and check Gallery's basic layout
+
+#-----environment-----
+
+#-----testresult-----
+description=file\:/Users/marek.trybus/workspace_small/jbr/suite/DesktopEnvironmentTest.java
+elapsed=976 0\:00\:00.976
+end=Sun Nov 08 10\:40\:16 CET 2026
+environment=regtest
+execStatus=Passed. Execution successful
+harnessLoaderMode=Classpath Loader
+harnessVariety=Full Bundle
+hostname=192.168.100.130
+javatestOS=Mac OS X 26.7.2 (aarch64)
+javatestVersion=6.0-ea+b24-2026-10-22-${BUILT_FROM_COMMIT}
+jtregVersion=jtreg 8.4 dev 0
+script=com.sun.javatest.regtest.exec.RegressionScript
+sections=script_messages build build main
+start=Sun Nov 08 10\:40\:15 CET 2026
+test=suite/DesktopEnvironmentTest.java
+testJDK=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+testJDK_OS=[name\:Mac OS X,arch\:aarch64,version\:26.7.2,family\:mac,simple_arch\:aarch64,simple_version\:26.7,processors\:18,maxMemory\:51539607552,maxSwap\:0]
+testJDK_os.arch=aarch64
+testJDK_os.name=Mac OS X
+testJDK_os.version=26.7.2
+totalTime=977
+user.name=marek.trybus
+work=/Users/marek.trybus/workspace_small/jbr/work/jtreg/suite
+
+#section:script_messages
+----------messages:(7/441)----------
+JDK under test: /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+openjdk version "21.0.13" 2026-10-20
+OpenJDK Runtime Environment Homebrew (build 21.0.13)
+OpenJDK 64-Bit Server VM Homebrew (build 21.0.13, mixed mode, sharing)
+Library /suite/lib; kind: packages
+   source directory: /Users/marek.trybus/workspace_small/jbr/suite/lib
+   class directory: /Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite/suite/lib
+
+#section:build
+----------messages:(5/226)----------
+command: build Gallery GalleryTestSupport
+reason: User specified action: run build Gallery GalleryTestSupport 
+started: Sun Nov 08 10:40:15.463 CET 2026
+finished: Sun Nov 08 10:40:15.468 CET 2026
+elapsed time (seconds): 0.005
+result: Passed. All files up to date
+
+#section:build
+----------messages:(5/190)----------
+command: build DesktopEnvironmentTest
+reason: Named class compiled on demand
+started: Sun Nov 08 10:40:15.469 CET 2026
+finished: Sun Nov 08 10:40:15.469 CET 2026
+elapsed time (seconds): 0.0
+result: Passed. All files up to date
+
+#section:main
+----------messages:(7/289)----------
+command: main DesktopEnvironmentTest
+reason: User specified action: run main/othervm/timeout=120 DesktopEnvironmentTest 
+started: Sun Nov 08 10:40:15.469 CET 2026
+Mode: othervm [/othervm specified]
+Process id: 79566
+finished: Sun Nov 08 10:40:16.381 CET 2026
+elapsed time (seconds): 0.912
+----------configuration:(0/0)----------
+----------System.out:(7/647)----------
+OS=Mac OS X 26.7.2
+arch=aarch64
+JDK=21.0.13
+headless=false
+display=Display 1 bounds=java.awt.Rectangle[x=-1728,y=-22,width=1728,height=1117] usable=java.awt.Rectangle[x=-1728,y=11,width=1728,height=1084] scale=AffineTransform[[2.0, 0.0, 0.0], [0.0, 2.0, 0.0]]
+display=Display 3 bounds=java.awt.Rectangle[x=0,y=0,width=1920,height=1080] usable=java.awt.Rectangle[x=0,y=30,width=1920,height=971] scale=AffineTransform[[2.0, 0.0, 0.0], [0.0, 2.0, 0.0]]
+display=Display 5 bounds=java.awt.Rectangle[x=1920,y=0,width=1920,height=1080] usable=java.awt.Rectangle[x=1920,y=30,width=1920,height=1050] scale=AffineTransform[[2.0, 0.0, 0.0], [0.0, 2.0, 0.0]]
+----------System.err:(1/15)----------
+STATUS:Passed.
+----------rerun:(25/1919)*----------
+cd /Users/marek.trybus/workspace_small/jbr/work/jtreg/scratch && \\
+HOME=/Users/marek.trybus \\
+LANG=C.UTF-8 \\
+LC_ALL=C.UTF-8 \\
+LC_CTYPE=C.UTF-8 \\
+PATH=/bin:/usr/bin:/usr/sbin \\
+CLASSPATH=/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite:/Users/marek.trybus/workspace_small/jbr/suite:/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite/suite/lib:/Users/marek.trybus/workspace_small/jbr/suite/lib:/Users/marek.trybus/tools/jtreg/build/images/jtreg/lib/javatest.jar:/Users/marek.trybus/tools/jtreg/build/images/jtreg/lib/jtreg.jar \\
+    /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home/bin/java \\
+        -Dtest.vm.opts= \\
+        -Dtest.tool.vm.opts= \\
+        -Dtest.compiler.opts= \\
+        -Dtest.java.opts= \\
+        -Dtest.jdk=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home \\
+        -Dcompile.jdk=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home \\
+        -Dtest.timeout.factor=1.0 \\
+        -Dtest.root=/Users/marek.trybus/workspace_small/jbr \\
+        -Dtest.name=suite/DesktopEnvironmentTest.java \\
+        -Dtest.verbose=Verbose[p=SUMMARY,f=SUMMARY,e=SUMMARY,t=false,m=false] \\
+        -Dtest.file=/Users/marek.trybus/workspace_small/jbr/suite/DesktopEnvironmentTest.java \\
+        -Dtest.main.class=DesktopEnvironmentTest \\
+        -Dtest.src=/Users/marek.trybus/workspace_small/jbr/suite \\
+        -Dtest.src.path=/Users/marek.trybus/workspace_small/jbr/suite:/Users/marek.trybus/workspace_small/jbr/suite/lib \\
+        -Dtest.classes=/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite \\
+        -Dtest.class.path=/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite:/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite/suite/lib \\
+        com.sun.javatest.regtest.agent.MainWrapper /Users/marek.trybus/workspace_small/jbr/work/jtreg/suite/DesktopEnvironmentTest.d/main.0.jta
+result: Passed. Execution successful
+
+
+test result: Passed. Execution successful

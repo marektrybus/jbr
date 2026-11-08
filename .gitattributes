@@ -1,0 +1,7 @@
+# Keep launch scripts runnable after checkout on any platform.
+*.sh text eol=lf
+# Preserve the assignment's exact source bytes for the SHA-256 check.
+suite/lib/Gallery.java -text
+# Keep diagnostic evidence byte-for-byte; generated trailing spaces are intentional.
+evidence/automated/** -text -whitespace
+evidence/manual-*/* -text -whitespace

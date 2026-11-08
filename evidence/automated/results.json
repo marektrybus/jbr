@@ -1,0 +1,162 @@
+{
+  "start": "2026-11-08T10:40:15.323000+01:00",
+  "finish": "2026-11-08T10:40:36.399000+01:00",
+  "timezone": "Europe/Warsaw",
+  "provenance": "Automated jtreg execution on the local graphical desktop.",
+  "command": "scripts/run-tests.sh",
+  "runner_exit_code": 2,
+  "passed": 9,
+  "failed": 6,
+  "errors": 0,
+  "gallery_sha256": "06c13fe21b278bcf8192b35f45041aef6698ed1d4fa64a0ab9a6c869cff1f3bb",
+  "tests": [
+    {
+      "test": "DesktopEnvironmentTest",
+      "status": "Passed",
+      "detail": "Passed. Execution successful",
+      "result_sha256": "d07c859cf834f41beef6d40b2c6b858d53d387d6cfab1b590236f3cc1eb2e56c",
+      "test_source_sha256": "ee8b21a64b8cac9981d6a9ea0f6ec060c117ec6b3ad3950aaef2a0c33e5ba91a",
+      "result_file": "tests/DesktopEnvironmentTest.jtr"
+    },
+    {
+      "test": "InfoPopupPositionTest",
+      "status": "Failed",
+      "detail": "Failed. Execution failed\\: `main' threw exception\\: java.lang.AssertionError\\: Info popup must meet the selected cell's bottom-left screen corner (clamped)\\: expected java.awt.Point[x\\=64,y\\=288] but got java.awt.Point[x\\=0,y\\=130]",
+      "result_sha256": "76f4827fc2c9f18e37b3455d3bb6fa97c58c0e383431ecea9eb9fccb5241a2cb",
+      "test_source_sha256": "4436b4553aeace4bac5df05aeac342f204295a484b3b5434b9ba1b4084d5dea7",
+      "result_file": "tests/InfoPopupPositionTest.jtr"
+    },
+    {
+      "test": "LifecycleTest",
+      "status": "Passed",
+      "detail": "Passed. Execution successful",
+      "result_sha256": "51f4db38555aefec21aecb4ec804b3ea0c11719d453b60ef2e4fbf6092c305af",
+      "test_source_sha256": "948a6516550915becb22404261a9baf2fcaf79a7adf1a999204a14ef9ebeba83",
+      "result_file": "tests/LifecycleTest.jtr"
+    },
+    {
+      "test": "PreviewResponsivenessTest",
+      "status": "Passed",
+      "detail": "Passed. Execution successful",
+      "result_sha256": "014af0fa44587b5a3a2047a0859a449b103bf0cba0536c32f3fbfd49f43f0271",
+      "test_source_sha256": "cea3699c7cc98d753a383c7a5a8b6d09a12ed742a9e26238d188506565f11366",
+      "result_file": "tests/PreviewResponsivenessTest.jtr"
+    },
+    {
+      "test": "RescanStateTest",
+      "status": "Passed",
+      "detail": "Passed. Execution successful",
+      "result_sha256": "f0d22bec18b2680804127628b10086dd5aa4d7cea39a8100337aba4e1741af7a",
+      "test_source_sha256": "5f2e6701daab51da2e242a4c288bfdee622ac494c78d2a2008d18a3c549f9363",
+      "result_file": "tests/RescanStateTest.jtr"
+    },
+    {
+      "test": "ScanProgressEdtTest",
+      "status": "Failed",
+      "detail": "Failed. Execution failed\\: `main' threw exception\\: java.lang.AssertionError\\: Progress must be updated on EDT; observed [Swing progress mutation callback on gallery-loader, Swing progress mutation callback on gallery-loader]",
+      "result_sha256": "96d9217db246690e11ccd0b1a6729b5dab9d99ab24b67b555cf168c29384ad0a",
+      "test_source_sha256": "350b348dadac5bb3b517f69fe3f1f00c5e4395352d51fe0993d4f442341ff459",
+      "result_file": "tests/ScanProgressEdtTest.jtr"
+    },
+    {
+      "test": "ScanSortDeadlockTest",
+      "status": "Failed",
+      "detail": "Failed. Execution failed\\: `main' threw exception\\: java.lang.AssertionError\\: Sort must complete while scanning. Child exit\\=1; inspect the EDT/loader cycle and jcmd output above",
+      "result_sha256": "71d8f4a808947e80a9f5baa3b50ea1a0777925125339419738da3a425e07c536",
+      "test_source_sha256": "851eaf7d76696027477dca81bfe5364d5261a1d9d726a621be7a3c64ed76f947",
+      "result_file": "tests/ScanSortDeadlockTest.jtr"
+    },
+    {
+      "test": "SelectionInteractionTest",
+      "status": "Passed",
+      "detail": "Passed. Execution successful",
+      "result_sha256": "52444bc2e181bb7de7dfdfcabe686cf7c8719b2435144034679581fb772a25fc",
+      "test_source_sha256": "f171618d3c61c9c91694416b02519172b7e21976764e030bea7be88043bf1e05",
+      "result_file": "tests/SelectionInteractionTest.jtr"
+    },
+    {
+      "test": "SortAfterRescanTest",
+      "status": "Failed",
+      "detail": "Failed. Execution failed\\: `main' threw exception\\: java.lang.AssertionError\\: Newly loaded artworks must follow selected size/name order; expected\\=[art-002\\:512, art-000\\:1536, art-001\\:2048]; actual\\=[art-000\\:1536, art-001\\:2048, art-002\\:512]",
+      "result_sha256": "a5899fdbaf140d3b1e64c37d06b71a28ee3853de27bb2b9fc7b05f657456cbb9",
+      "test_source_sha256": "0b270b5fae813070ba85f935f36089a5564a18e963f36d7753253af65aa40ed4",
+      "result_file": "tests/SortAfterRescanTest.jtr"
+    },
+    {
+      "test": "SortingPreservedDuringScanTest",
+      "status": "Failed",
+      "detail": "Failed. Execution failed\\: `main' threw exception\\: java.lang.AssertionError\\: Newly loaded artworks must follow selected size/name order; expected\\=[art-002\\:512, art-000\\:1536, art-001\\:2048]; actual\\=[art-000\\:1536, art-001\\:2048, art-002\\:512]",
+      "result_sha256": "24e22b0bdc4a8752fc946804af34e3b0ac9cca787807bd783643e68fb4818537",
+      "test_source_sha256": "addfd9f2d91827953d768908d8a3251cbd0e00a7e21ce3448a19c7ef806825cf",
+      "result_file": "tests/SortingPreservedDuringScanTest.jtr"
+    },
+    {
+      "test": "SourceIntegrityTest",
+      "status": "Passed",
+      "detail": "Passed. Execution successful",
+      "result_sha256": "2a0c4956f15e7d813d867320d50a96125bbc9a28842f2cc0db586348b43a154e",
+      "test_source_sha256": "1006a80f96029b1ee72234b1fa0117bfe525da42350131fd69a00582141bbfbf",
+      "result_file": "tests/SourceIntegrityTest.jtr"
+    },
+    {
+      "test": "StatusCacheTest",
+      "status": "Passed",
+      "detail": "Passed. Execution successful",
+      "result_sha256": "afff37b58172b4e4f9b4645fc4f078d744963541f5ece25f9dbe68c2b4ef3c37",
+      "test_source_sha256": "6eef7629adaaba2a3276f4d257a53d81fd4b4133c663dd99afe638b2a88348ab",
+      "result_file": "tests/StatusCacheTest.jtr"
+    },
+    {
+      "test": "StatusDuringScanTest",
+      "status": "Passed",
+      "detail": "Passed. Execution successful",
+      "result_sha256": "8edd9990ea31f383176a3378510fb205b46f3bbd56ea9c5ec81c7539a9a74150",
+      "test_source_sha256": "d1f2df73031901b4a60d339e14706cba2d056d7709e7a3395ed7c0cd2dd7315c",
+      "result_file": "tests/StatusDuringScanTest.jtr"
+    },
+    {
+      "test": "TooltipInfoDetailsTest",
+      "status": "Passed",
+      "detail": "Passed. Execution successful",
+      "result_sha256": "ce14b073fec26eca3241554b6a7e14c54f76619416ddb9913ae7ba9ec7c88a2e",
+      "test_source_sha256": "02f3d25ae030ca526bcc3ee490b14a6efd1323d33432d2b352baa3e127a190a3",
+      "result_file": "tests/TooltipInfoDetailsTest.jtr"
+    },
+    {
+      "test": "WindowPlacementTest",
+      "status": "Failed",
+      "detail": "Failed. Execution failed\\: `main' threw exception\\: java.lang.AssertionError\\: Window must be centered in usable screen\\: expected top-left java.awt.Point[x\\=459,y\\=223] but got java.awt.Point[x\\=919,y\\=416]",
+      "result_sha256": "d1807d8f9163b3d11fc141c205a553a612729d1c8088c1c28c2b51326a82ef68",
+      "test_source_sha256": "c4359b7e0a8f95ab817fb397026f9ec7b102f50d0f1805d2abf4b4d9ce308c26",
+      "result_file": "tests/WindowPlacementTest.jtr"
+    }
+  ],
+  "support_sources_sha256": {
+    "suite/lib/Gallery.java": "06c13fe21b278bcf8192b35f45041aef6698ed1d4fa64a0ab9a6c869cff1f3bb",
+    "suite/lib/GalleryTestSupport.java": "94b4930cd22302db7208b66e199d2e2195c93623e67cb4dfa1c6ea53214ac585",
+    "suite/lib/GalleryUiTestSupport.java": "675f08e9b3c01f972ff911344e553af969e987a79932483bde88681a193cdead",
+    "suite/lib/SortTestSupport.java": "d5a2573b6ef0f63774b87a64dc1752e5cfb16f28ec642f86512b927cfd953831"
+  },
+  "summary_file": "summary.txt",
+  "execution_files": [
+    {
+      "file": "execution/runner.log",
+      "sha256": "0e86efd48828b38711ff9f1aa4d40cebcf1c8c7a52c61249da22c2cb10d170a5"
+    },
+    {
+      "file": "execution/jtreg.version",
+      "sha256": "ae00dbc981eb476d629b2c1c8bddb0f044c0f5f55e1483fcc521e1d1ea940f10"
+    },
+    {
+      "file": "execution/lastRun.txt",
+      "sha256": "1cb204fcfcd768ec03d61dc9e4fce18e3efda31e8f5bd96018f06d2aa35191c9"
+    }
+  ],
+  "diagnostics": [
+    {
+      "test": "ScanSortDeadlockTest",
+      "file": "diagnostics/ScanSortDeadlockTest/thread-dump.txt",
+      "sha256": "5f7e4c4522382d6d083925feaccb2851f99f388e1ff4503a4c0a98ca853411bd"
+    }
+  ]
+}

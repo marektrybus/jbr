@@ -1,0 +1,590 @@
+#Test Results (version 2)
+#Sun Nov 08 10:40:25 CET 2026
+#-----testdescription-----
+$file=/Users/marek.trybus/workspace_small/jbr/suite/ScanSortDeadlockTest.java
+$root=/Users/marek.trybus/workspace_small/jbr
+keywords=headful othervm
+library=/suite/lib
+maxTimeout=120
+run=USER_SPECIFIED build Gallery GalleryTestSupport\nUSER_SPECIFIED main/othervm/timeout\=120 ScanSortDeadlockTest\n
+source=ScanSortDeadlockTest.java
+title=Sort and scan publication must not deadlock the Swing EDT
+
+#-----environment-----
+
+#-----testresult-----
+description=file\:/Users/marek.trybus/workspace_small/jbr/suite/ScanSortDeadlockTest.java
+elapsed=3113 0\:00\:03.113
+end=Sun Nov 08 10\:40\:25 CET 2026
+environment=regtest
+execStatus=Failed. Execution failed\: `main' threw exception\: java.lang.AssertionError\: Sort must complete while scanning. Child exit\=1; inspect the EDT/loader cycle and jcmd output above
+harnessLoaderMode=Classpath Loader
+harnessVariety=Full Bundle
+hostname=192.168.100.130
+javatestOS=Mac OS X 26.7.2 (aarch64)
+javatestVersion=6.0-ea+b24-2026-10-22-${BUILT_FROM_COMMIT}
+jtregVersion=jtreg 8.4 dev 0
+script=com.sun.javatest.regtest.exec.RegressionScript
+sections=script_messages build build main
+start=Sun Nov 08 10\:40\:22 CET 2026
+test=suite/ScanSortDeadlockTest.java
+testJDK=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+testJDK_OS=[name\:Mac OS X,arch\:aarch64,version\:26.7.2,family\:mac,simple_arch\:aarch64,simple_version\:26.7,processors\:18,maxMemory\:51539607552,maxSwap\:0]
+testJDK_os.arch=aarch64
+testJDK_os.name=Mac OS X
+testJDK_os.version=26.7.2
+totalTime=3114
+user.name=marek.trybus
+work=/Users/marek.trybus/workspace_small/jbr/work/jtreg/suite
+
+#section:script_messages
+----------messages:(7/441)----------
+JDK under test: /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+openjdk version "21.0.13" 2026-10-20
+OpenJDK Runtime Environment Homebrew (build 21.0.13)
+OpenJDK 64-Bit Server VM Homebrew (build 21.0.13, mixed mode, sharing)
+Library /suite/lib; kind: packages
+   source directory: /Users/marek.trybus/workspace_small/jbr/suite/lib
+   class directory: /Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite/suite/lib
+
+#section:build
+----------messages:(5/224)----------
+command: build Gallery GalleryTestSupport
+reason: User specified action: run build Gallery GalleryTestSupport 
+started: Sun Nov 08 10:40:22.065 CET 2026
+finished: Sun Nov 08 10:40:22.065 CET 2026
+elapsed time (seconds): 0.0
+result: Passed. All files up to date
+
+#section:build
+----------messages:(5/188)----------
+command: build ScanSortDeadlockTest
+reason: Named class compiled on demand
+started: Sun Nov 08 10:40:22.065 CET 2026
+finished: Sun Nov 08 10:40:22.065 CET 2026
+elapsed time (seconds): 0.0
+result: Passed. All files up to date
+
+#section:main
+----------messages:(7/285)----------
+command: main ScanSortDeadlockTest
+reason: User specified action: run main/othervm/timeout=120 ScanSortDeadlockTest 
+started: Sun Nov 08 10:40:22.065 CET 2026
+Mode: othervm [/othervm specified]
+Process id: 79583
+finished: Sun Nov 08 10:40:25.177 CET 2026
+elapsed time (seconds): 3.112
+----------configuration:(0/0)----------
+----------System.out:(469/30972)----------
+child: Publication is waiting for EDT; held monitors=1
+child: Controlled invokeAndWait interleaving observed=true
+child: Confirmed EDT -> loader monitor -> EDT cycle=true
+child: "main" prio=5 Id=1 RUNNABLE
+child: 	at java.management@21.0.13/sun.management.ThreadImpl.dumpThreads0(Native Method)
+child: 	at java.management@21.0.13/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:518)
+child: 	at java.management@21.0.13/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:506)
+child: 	at app//GalleryTestSupport.dumpThreads(GalleryTestSupport.java:111)
+child: 	at app//ScanSortDeadlockTest.child(ScanSortDeadlockTest.java:124)
+child: 	at app//ScanSortDeadlockTest.main(ScanSortDeadlockTest.java:24)
+child: 
+child: 
+child:     at java.management@21.0.13/sun.management.ThreadImpl.dumpThreads0(Native Method)
+child:     at java.management@21.0.13/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:518)
+child:     at java.management@21.0.13/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:506)
+child:     at app//GalleryTestSupport.dumpThreads(GalleryTestSupport.java:111)
+child:     at app//ScanSortDeadlockTest.child(ScanSortDeadlockTest.java:124)
+child:     at app//ScanSortDeadlockTest.main(ScanSortDeadlockTest.java:24)
+child: "Reference Handler" daemon prio=10 Id=9 RUNNABLE
+child: 	at java.base@21.0.13/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+child: 	at java.base@21.0.13/java.lang.ref.Reference.processPendingReferences(Reference.java:246)
+child: 	at java.base@21.0.13/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:208)
+child: 
+child: 
+child:     at java.base@21.0.13/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+child:     at java.base@21.0.13/java.lang.ref.Reference.processPendingReferences(Reference.java:246)
+child:     at java.base@21.0.13/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:208)
+child: "Finalizer" daemon prio=8 Id=10 WAITING on java.lang.ref.NativeReferenceQueue$Lock@3eb07fd3
+child: 	at java.base@21.0.13/java.lang.Object.wait0(Native Method)
+child: 	-  waiting on java.lang.ref.NativeReferenceQueue$Lock@3eb07fd3
+child: 	at java.base@21.0.13/java.lang.Object.wait(Object.java:366)
+child: 	at java.base@21.0.13/java.lang.Object.wait(Object.java:339)
+child: 	at java.base@21.0.13/java.lang.ref.NativeReferenceQueue.await(NativeReferenceQueue.java:48)
+child: 	at java.base@21.0.13/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:158)
+child: 	at java.base@21.0.13/java.lang.ref.NativeReferenceQueue.remove(NativeReferenceQueue.java:89)
+child: 	at java.base@21.0.13/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:173)
+child: 
+child: 
+child:     at java.base@21.0.13/java.lang.Object.wait0(Native Method)
+child:     at java.base@21.0.13/java.lang.Object.wait(Object.java:366)
+child:     at java.base@21.0.13/java.lang.Object.wait(Object.java:339)
+child:     at java.base@21.0.13/java.lang.ref.NativeReferenceQueue.await(NativeReferenceQueue.java:48)
+child:     at java.base@21.0.13/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:158)
+child:     at java.base@21.0.13/java.lang.ref.NativeReferenceQueue.remove(NativeReferenceQueue.java:89)
+child:     at java.base@21.0.13/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:173)
+child: "Signal Dispatcher" daemon prio=9 Id=11 RUNNABLE
+child: 
+child: 
+child: "Notification Thread" daemon prio=9 Id=26 RUNNABLE
+child: 
+child: 
+child: "Common-Cleaner" daemon prio=8 Id=27 TIMED_WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@506c589e
+child: 	at java.base@21.0.13/jdk.internal.misc.Unsafe.park(Native Method)
+child: 	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@506c589e
+child: 	at java.base@21.0.13/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+child: 	at java.base@21.0.13/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1886)
+child: 	at java.base@21.0.13/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+child: 	at java.base@21.0.13/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+child: 	at java.base@21.0.13/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+child: 	at java.base@21.0.13/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+child: 	at java.base@21.0.13/java.lang.Thread.runWith(Thread.java:1596)
+child: 	...
+child: 
+child: 
+child:     at java.base@21.0.13/jdk.internal.misc.Unsafe.park(Native Method)
+child:     at java.base@21.0.13/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+child:     at java.base@21.0.13/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1886)
+child:     at java.base@21.0.13/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+child:     at java.base@21.0.13/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+child:     at java.base@21.0.13/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+child:     at java.base@21.0.13/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+child:     at java.base@21.0.13/java.lang.Thread.runWith(Thread.java:1596)
+child:     at java.base@21.0.13/java.lang.Thread.run(Thread.java:1583)
+child:     at java.base@21.0.13/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:186)
+child: "AppKit Thread" daemon prio=5 Id=28 RUNNABLE (in native)
+child: 
+child: 
+child: "AWT-Shutdown" prio=5 Id=29 WAITING on java.lang.Object@69d0a921
+child: 	at java.base@21.0.13/java.lang.Object.wait0(Native Method)
+child: 	-  waiting on java.lang.Object@69d0a921
+child: 	at java.base@21.0.13/java.lang.Object.wait(Object.java:366)
+child: 	at java.base@21.0.13/java.lang.Object.wait(Object.java:339)
+child: 	at java.desktop@21.0.13/sun.awt.AWTAutoShutdown.run(AWTAutoShutdown.java:291)
+child: 	at java.base@21.0.13/java.lang.Thread.runWith(Thread.java:1596)
+child: 	at java.base@21.0.13/java.lang.Thread.run(Thread.java:1583)
+child: 
+child: 
+child:     at java.base@21.0.13/java.lang.Object.wait0(Native Method)
+child:     at java.base@21.0.13/java.lang.Object.wait(Object.java:366)
+child:     at java.base@21.0.13/java.lang.Object.wait(Object.java:339)
+child:     at java.desktop@21.0.13/sun.awt.AWTAutoShutdown.run(AWTAutoShutdown.java:291)
+child:     at java.base@21.0.13/java.lang.Thread.runWith(Thread.java:1596)
+child:     at java.base@21.0.13/java.lang.Thread.run(Thread.java:1583)
+child: "AWT-EventQueue-0" prio=6 Id=30 BLOCKED on java.util.ArrayList@7aec35a owned by "gallery-loader" Id=34
+child: 	at app//Gallery.toggleSort(Gallery.java:266)
+child: 	-  blocked on java.util.ArrayList@7aec35a
+child: 	at app//Gallery$$Lambda/0x000000e80100b260.run(Unknown Source)
+child: 	at app//Gallery.lambda$button$2(Gallery.java:222)
+child: 	at app//Gallery$$Lambda/0x000000e80100b038.actionPerformed(Unknown Source)
+child: 	at java.desktop@21.0.13/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+child: 	at java.desktop@21.0.13/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+child: 	at java.desktop@21.0.13/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+child: 	at java.desktop@21.0.13/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+child: 	...
+child: 
+child: 
+child:     at app//Gallery.toggleSort(Gallery.java:266)
+child:     at app//Gallery$$Lambda/0x000000e80100b260.run(Unknown Source)
+child:     at app//Gallery.lambda$button$2(Gallery.java:222)
+child:     at app//Gallery$$Lambda/0x000000e80100b038.actionPerformed(Unknown Source)
+child:     at java.desktop@21.0.13/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+child:     at java.desktop@21.0.13/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+child:     at java.desktop@21.0.13/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+child:     at java.desktop@21.0.13/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+child:     at java.desktop@21.0.13/javax.swing.AbstractButton.doClick(AbstractButton.java:374)
+child:     at app//ScanSortDeadlockTest.lambda$child$1(ScanSortDeadlockTest.java:87)
+child:     at app//ScanSortDeadlockTest$$Lambda/0x000000e80100bbb8.call(Unknown Source)
+child:     at java.base@21.0.13/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+child:     at java.desktop@21.0.13/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+child:     at java.desktop@21.0.13/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+child:     at java.desktop@21.0.13/java.awt.EventQueue$4.run(EventQueue.java:720)
+child:     at java.desktop@21.0.13/java.awt.EventQueue$4.run(EventQueue.java:714)
+child:     at java.base@21.0.13/java.security.AccessController.executePrivileged(AccessController.java:778)
+child:     at java.base@21.0.13/java.security.AccessController.doPrivileged(AccessController.java:400)
+child:     at java.base@21.0.13/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+child:     at java.desktop@21.0.13/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+child:     at java.desktop@21.0.13/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+child:     at java.desktop@21.0.13/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+child:     at java.desktop@21.0.13/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+child:     at java.desktop@21.0.13/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+child:     at java.desktop@21.0.13/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+child:     at java.desktop@21.0.13/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+child: "Java2D Queue Flusher" daemon prio=10 Id=31 TIMED_WAITING on sun.java2d.metal.MTLRenderQueue$QueueFlusher@799f7e29
+child: 	at java.base@21.0.13/java.lang.Object.wait0(Native Method)
+child: 	-  waiting on sun.java2d.metal.MTLRenderQueue$QueueFlusher@799f7e29
+child: 	at java.base@21.0.13/java.lang.Object.wait(Object.java:366)
+child: 	at java.desktop@21.0.13/sun.java2d.metal.MTLRenderQueue$QueueFlusher.run(MTLRenderQueue.java:210)
+child: 	at java.base@21.0.13/java.lang.Thread.runWith(Thread.java:1596)
+child: 	at java.base@21.0.13/java.lang.Thread.run(Thread.java:1583)
+child: 
+child: 
+child:     at java.base@21.0.13/java.lang.Object.wait0(Native Method)
+child:     at java.base@21.0.13/java.lang.Object.wait(Object.java:366)
+child:     at java.desktop@21.0.13/sun.java2d.metal.MTLRenderQueue$QueueFlusher.run(MTLRenderQueue.java:210)
+child:     at java.base@21.0.13/java.lang.Thread.runWith(Thread.java:1596)
+child:     at java.base@21.0.13/java.lang.Thread.run(Thread.java:1583)
+child: "Java2D Disposer" daemon prio=10 Id=32 WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@4b85612c
+child: 	at java.base@21.0.13/jdk.internal.misc.Unsafe.park(Native Method)
+child: 	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@4b85612c
+child: 	at java.base@21.0.13/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+child: 	at java.base@21.0.13/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+child: 	at java.base@21.0.13/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+child: 	at java.base@21.0.13/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+child: 	at java.base@21.0.13/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1746)
+child: 	at java.base@21.0.13/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:67)
+child: 	at java.base@21.0.13/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:158)
+child: 	...
+child: 
+child: 
+child:     at java.base@21.0.13/jdk.internal.misc.Unsafe.park(Native Method)
+child:     at java.base@21.0.13/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+child:     at java.base@21.0.13/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+child:     at java.base@21.0.13/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+child:     at java.base@21.0.13/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+child:     at java.base@21.0.13/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1746)
+child:     at java.base@21.0.13/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:67)
+child:     at java.base@21.0.13/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:158)
+child:     at java.base@21.0.13/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:234)
+child:     at java.desktop@21.0.13/sun.java2d.Disposer.run(Disposer.java:145)
+child:     at java.base@21.0.13/java.lang.Thread.runWith(Thread.java:1596)
+child:     at java.base@21.0.13/java.lang.Thread.run(Thread.java:1583)
+child: "TimerQueue" daemon prio=5 Id=33 TIMED_WAITING on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5c29bfd
+child: 	at java.base@21.0.13/jdk.internal.misc.Unsafe.park(Native Method)
+child: 	-  waiting on java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject@5c29bfd
+child: 	at java.base@21.0.13/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+child: 	at java.base@21.0.13/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1797)
+child: 	at java.base@21.0.13/java.util.concurrent.DelayQueue.take(DelayQueue.java:254)
+child: 	at java.desktop@21.0.13/javax.swing.TimerQueue.run(TimerQueue.java:165)
+child: 	at java.base@21.0.13/java.lang.Thread.runWith(Thread.java:1596)
+child: 	at java.base@21.0.13/java.lang.Thread.run(Thread.java:1583)
+child: 
+child: 	Number of locked synchronizers = 1
+child: 	- java.util.concurrent.locks.ReentrantLock$NonfairSync@277050dc
+child: 
+child: 
+child:     at java.base@21.0.13/jdk.internal.misc.Unsafe.park(Native Method)
+child:     at java.base@21.0.13/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+child:     at java.base@21.0.13/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1797)
+child:     at java.base@21.0.13/java.util.concurrent.DelayQueue.take(DelayQueue.java:254)
+child:     at java.desktop@21.0.13/javax.swing.TimerQueue.run(TimerQueue.java:165)
+child:     at java.base@21.0.13/java.lang.Thread.runWith(Thread.java:1596)
+child:     at java.base@21.0.13/java.lang.Thread.run(Thread.java:1583)
+child: "gallery-loader" daemon prio=6 Id=34 WAITING on java.awt.EventQueue$1AWTInvocationLock@4b9af9a9
+child: 	at java.base@21.0.13/java.lang.Object.wait0(Native Method)
+child: 	-  waiting on java.awt.EventQueue$1AWTInvocationLock@4b9af9a9
+child: 	at java.base@21.0.13/java.lang.Object.wait(Object.java:366)
+child: 	at java.base@21.0.13/java.lang.Object.wait(Object.java:339)
+child: 	at java.desktop@21.0.13/java.awt.EventQueue.invokeAndWait(EventQueue.java:1365)
+child: 	at java.desktop@21.0.13/java.awt.EventQueue.invokeAndWait(EventQueue.java:1346)
+child: 	at java.desktop@21.0.13/javax.swing.SwingUtilities.invokeAndWait(SwingUtilities.java:1480)
+child: 	at app//Gallery.scan(Gallery.java:377)
+child: 	-  locked java.util.ArrayList@7aec35a
+child: 	at app//Gallery.lambda$rescan$7(Gallery.java:350)
+child: 	...
+child: 
+child: 
+child:     at java.base@21.0.13/java.lang.Object.wait0(Native Method)
+child:     at java.base@21.0.13/java.lang.Object.wait(Object.java:366)
+child:     at java.base@21.0.13/java.lang.Object.wait(Object.java:339)
+child:     at java.desktop@21.0.13/java.awt.EventQueue.invokeAndWait(EventQueue.java:1365)
+child:     at java.desktop@21.0.13/java.awt.EventQueue.invokeAndWait(EventQueue.java:1346)
+child:     at java.desktop@21.0.13/javax.swing.SwingUtilities.invokeAndWait(SwingUtilities.java:1480)
+child:     at app//Gallery.scan(Gallery.java:377)
+child:     at app//Gallery.lambda$rescan$7(Gallery.java:350)
+child:     at app//Gallery$$Lambda/0x000000e8010c1078.run(Unknown Source)
+child:     at java.base@21.0.13/java.lang.Thread.runWith(Thread.java:1596)
+child:     at java.base@21.0.13/java.lang.Thread.run(Thread.java:1583)
+child:     holds java.util.ArrayList@7aec35a
+child: CAPTURE_DEADLOCK
+JDK diagnostic output:
+79584:
+2026-11-08 10:40:24
+Full thread dump OpenJDK 64-Bit Server VM (21.0.13 mixed mode, sharing)
+                 JDK version: OpenJDK Runtime Environment Homebrew (21.0.13) (build 21.0.13)
+
+Threads class SMR info:
+_java_thread_list=0x0000000b56a743c0, length=18, elements={
+0x0000000102a61a90, 0x0000000102a7e170, 0x0000000b5b138000, 0x0000000b5b138700,
+0x0000000b5b138e00, 0x0000000b5b139500, 0x0000000b5ad74800, 0x0000000b5ad75000,
+0x0000000b5b139c00, 0x0000000b5b13a300, 0x0000000b5b13b100, 0x0000000b5b504000,
+0x0000000b5b504700, 0x0000000b5b504e00, 0x0000000b5b505500, 0x0000000b5b13b800,
+0x0000000b5c6c8000, 0x0000000b5c6c8700
+}
+
+"main" #1 [5891] prio=5 os_prio=31 cpu=62.70ms elapsed=2.64s tid=0x0000000102a61a90 nid=5891 runnable  [0x000000016df2e000]
+   java.lang.Thread.State: RUNNABLE
+	at java.io.FileInputStream.readBytes(java.base@21.0.13/Native Method)
+	at java.io.FileInputStream.read(java.base@21.0.13/FileInputStream.java:287)
+	at java.io.BufferedInputStream.fill(java.base@21.0.13/BufferedInputStream.java:291)
+	at java.io.BufferedInputStream.implRead(java.base@21.0.13/BufferedInputStream.java:325)
+	at java.io.BufferedInputStream.read(java.base@21.0.13/BufferedInputStream.java:312)
+	at ScanSortDeadlockTest.child(ScanSortDeadlockTest.java:128)
+	at ScanSortDeadlockTest.main(ScanSortDeadlockTest.java:24)
+
+   Locked ownable synchronizers:
+	- <0x00000003af805a28> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+
+"Reference Handler" #9 [29699] daemon prio=10 os_prio=31 cpu=0.07ms elapsed=2.63s tid=0x0000000102a7e170 nid=29699 waiting on condition  [0x000000016f0a6000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@21.0.13/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@21.0.13/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@21.0.13/Reference.java:208)
+
+   Locked ownable synchronizers:
+	- None
+
+"Finalizer" #10 [29443] daemon prio=8 os_prio=31 cpu=0.04ms elapsed=2.63s tid=0x0000000b5b138000 nid=29443 in Object.wait()  [0x000000016f2b2000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.13/Native Method)
+	- waiting on <0x00000003af8025f0> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@21.0.13/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.13/Object.java:339)
+	at java.lang.ref.NativeReferenceQueue.await(java.base@21.0.13/NativeReferenceQueue.java:48)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.13/ReferenceQueue.java:158)
+	at java.lang.ref.NativeReferenceQueue.remove(java.base@21.0.13/NativeReferenceQueue.java:89)
+	- locked <0x00000003af8025f0> (a java.lang.ref.NativeReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@21.0.13/Finalizer.java:173)
+
+   Locked ownable synchronizers:
+	- None
+
+"Signal Dispatcher" #11 [24579] daemon prio=9 os_prio=31 cpu=0.08ms elapsed=2.63s tid=0x0000000b5b138700 nid=24579 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Service Thread" #12 [28675] daemon prio=9 os_prio=31 cpu=0.04ms elapsed=2.63s tid=0x0000000b5b138e00 nid=28675 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Monitor Deflation Thread" #13 [28419] daemon prio=9 os_prio=31 cpu=0.17ms elapsed=2.63s tid=0x0000000b5b139500 nid=28419 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"C2 CompilerThread0" #14 [28163] daemon prio=9 os_prio=31 cpu=43.95ms elapsed=2.63s tid=0x0000000b5ad74800 nid=28163 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+   Locked ownable synchronizers:
+	- None
+
+"C1 CompilerThread0" #22 [25603] daemon prio=9 os_prio=31 cpu=43.92ms elapsed=2.63s tid=0x0000000b5ad75000 nid=25603 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+   Locked ownable synchronizers:
+	- None
+
+"Notification Thread" #26 [27907] daemon prio=9 os_prio=31 cpu=0.01ms elapsed=2.63s tid=0x0000000b5b139c00 nid=27907 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Common-Cleaner" #27 [26115] daemon prio=8 os_prio=31 cpu=0.09ms elapsed=2.63s tid=0x0000000b5b13a300 nid=26115 waiting on condition  [0x0000000170106000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.13/Native Method)
+	- parking to wait for  <0x00000003af8131c8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.13/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.13/AbstractQueuedSynchronizer.java:1886)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.13/ReferenceQueue.java:71)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.13/ReferenceQueue.java:143)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.13/ReferenceQueue.java:218)
+	at jdk.internal.ref.CleanerImpl.run(java.base@21.0.13/CleanerImpl.java:140)
+	at java.lang.Thread.runWith(java.base@21.0.13/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.13/Thread.java:1583)
+	at jdk.internal.misc.InnocuousThread.run(java.base@21.0.13/InnocuousThread.java:186)
+
+   Locked ownable synchronizers:
+	- None
+
+"AppKit Thread" #28 [259] daemon prio=5 os_prio=31 cpu=123.96ms elapsed=2.60s tid=0x0000000b5b13b100 nid=259 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"AWT-Shutdown" #29 [48643] prio=5 os_prio=31 cpu=0.13ms elapsed=2.56s tid=0x0000000b5b504000 nid=48643 in Object.wait()  [0x00000001704b6000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.13/Native Method)
+	- waiting on <0x00000003afbd7890> (a java.lang.Object)
+	at java.lang.Object.wait(java.base@21.0.13/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.13/Object.java:339)
+	at sun.awt.AWTAutoShutdown.run(java.desktop@21.0.13/AWTAutoShutdown.java:291)
+	- locked <0x00000003afbd7890> (a java.lang.Object)
+	at java.lang.Thread.runWith(java.base@21.0.13/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.13/Thread.java:1583)
+
+   Locked ownable synchronizers:
+	- None
+
+"AWT-EventQueue-0" #30 [73539] prio=6 os_prio=31 cpu=164.13ms elapsed=2.47s tid=0x0000000b5b504700 nid=73539 waiting for monitor entry  [0x00000001708cd000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at Gallery.toggleSort(Gallery.java:266)
+	- waiting to lock <0x00000003afc82668> (a java.util.ArrayList)
+	at Gallery$$Lambda/0x000000e80100b260.run(Unknown Source)
+	at Gallery.lambda$button$2(Gallery.java:222)
+	at Gallery$$Lambda/0x000000e80100b038.actionPerformed(Unknown Source)
+	at javax.swing.AbstractButton.fireActionPerformed(java.desktop@21.0.13/AbstractButton.java:1972)
+	at javax.swing.AbstractButton$Handler.actionPerformed(java.desktop@21.0.13/AbstractButton.java:2314)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(java.desktop@21.0.13/DefaultButtonModel.java:407)
+	at javax.swing.DefaultButtonModel.setPressed(java.desktop@21.0.13/DefaultButtonModel.java:262)
+	at javax.swing.AbstractButton.doClick(java.desktop@21.0.13/AbstractButton.java:374)
+	at ScanSortDeadlockTest.lambda$child$1(ScanSortDeadlockTest.java:87)
+	at ScanSortDeadlockTest$$Lambda/0x000000e80100bbb8.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(java.base@21.0.13/FutureTask.java:317)
+	at java.awt.event.InvocationEvent.dispatch(java.desktop@21.0.13/InvocationEvent.java:318)
+	at java.awt.EventQueue.dispatchEventImpl(java.desktop@21.0.13/EventQueue.java:773)
+	at java.awt.EventQueue$4.run(java.desktop@21.0.13/EventQueue.java:720)
+	at java.awt.EventQueue$4.run(java.desktop@21.0.13/EventQueue.java:714)
+	at java.security.AccessController.executePrivileged(java.base@21.0.13/AccessController.java:778)
+	at java.security.AccessController.doPrivileged(java.base@21.0.13/AccessController.java:400)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(java.base@21.0.13/ProtectionDomain.java:87)
+	at java.awt.EventQueue.dispatchEvent(java.desktop@21.0.13/EventQueue.java:742)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(java.desktop@21.0.13/EventDispatchThread.java:203)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(java.desktop@21.0.13/EventDispatchThread.java:124)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(java.desktop@21.0.13/EventDispatchThread.java:113)
+	at java.awt.EventDispatchThread.pumpEvents(java.desktop@21.0.13/EventDispatchThread.java:109)
+	at java.awt.EventDispatchThread.pumpEvents(java.desktop@21.0.13/EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.run(java.desktop@21.0.13/EventDispatchThread.java:90)
+
+   Locked ownable synchronizers:
+	- None
+
+"Java2D Queue Flusher" #31 [76563] daemon prio=10 os_prio=31 cpu=7.33ms elapsed=2.46s tid=0x0000000b5b504e00 nid=76563 in Object.wait()  [0x0000000170ada000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.13/Native Method)
+	- waiting on <0x00000003afc9b0c8> (a sun.java2d.metal.MTLRenderQueue$QueueFlusher)
+	at java.lang.Object.wait(java.base@21.0.13/Object.java:366)
+	at sun.java2d.metal.MTLRenderQueue$QueueFlusher.run(java.desktop@21.0.13/MTLRenderQueue.java:210)
+	- locked <0x00000003afc9b0c8> (a sun.java2d.metal.MTLRenderQueue$QueueFlusher)
+	at java.lang.Thread.runWith(java.base@21.0.13/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.13/Thread.java:1583)
+
+   Locked ownable synchronizers:
+	- None
+
+"Java2D Disposer" #32 [88579] daemon prio=10 os_prio=31 cpu=0.23ms elapsed=2.46s tid=0x0000000b5b505500 nid=88579 waiting on condition  [0x0000000170ce6000]
+   java.lang.Thread.State: WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.13/Native Method)
+	- parking to wait for  <0x00000003afc9b9b0> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.park(java.base@21.0.13/LockSupport.java:371)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(java.base@21.0.13/AbstractQueuedSynchronizer.java:519)
+	at java.util.concurrent.ForkJoinPool.unmanagedBlock(java.base@21.0.13/ForkJoinPool.java:3780)
+	at java.util.concurrent.ForkJoinPool.managedBlock(java.base@21.0.13/ForkJoinPool.java:3725)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@21.0.13/AbstractQueuedSynchronizer.java:1746)
+	at java.lang.ref.ReferenceQueue.await(java.base@21.0.13/ReferenceQueue.java:67)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@21.0.13/ReferenceQueue.java:158)
+	at java.lang.ref.ReferenceQueue.remove(java.base@21.0.13/ReferenceQueue.java:234)
+	at sun.java2d.Disposer.run(java.desktop@21.0.13/Disposer.java:145)
+	at java.lang.Thread.runWith(java.base@21.0.13/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.13/Thread.java:1583)
+
+   Locked ownable synchronizers:
+	- None
+
+"TimerQueue" #33 [90963] daemon prio=5 os_prio=31 cpu=1.22ms elapsed=2.26s tid=0x0000000b5b13b800 nid=90963 waiting on condition  [0x000000017ce4a000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@21.0.13/Native Method)
+	- parking to wait for  <0x00000003af06af00> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@21.0.13/LockSupport.java:269)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(java.base@21.0.13/AbstractQueuedSynchronizer.java:1797)
+	at java.util.concurrent.DelayQueue.take(java.base@21.0.13/DelayQueue.java:254)
+	at javax.swing.TimerQueue.run(java.desktop@21.0.13/TimerQueue.java:165)
+	at java.lang.Thread.runWith(java.base@21.0.13/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.13/Thread.java:1583)
+
+   Locked ownable synchronizers:
+	- <0x00000003af06af28> (a java.util.concurrent.locks.ReentrantLock$NonfairSync)
+
+"gallery-loader" #34 [116995] daemon prio=6 os_prio=31 cpu=7.93ms elapsed=2.23s tid=0x0000000b5c6c8000 nid=116995 in Object.wait()  [0x000000017e1fa000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@21.0.13/Native Method)
+	- waiting on <0x00000003af224710> (a java.awt.EventQueue$1AWTInvocationLock)
+	at java.lang.Object.wait(java.base@21.0.13/Object.java:366)
+	at java.lang.Object.wait(java.base@21.0.13/Object.java:339)
+	at java.awt.EventQueue.invokeAndWait(java.desktop@21.0.13/EventQueue.java:1365)
+	- locked <0x00000003af224710> (a java.awt.EventQueue$1AWTInvocationLock)
+	at java.awt.EventQueue.invokeAndWait(java.desktop@21.0.13/EventQueue.java:1346)
+	at javax.swing.SwingUtilities.invokeAndWait(java.desktop@21.0.13/SwingUtilities.java:1480)
+	at Gallery.scan(Gallery.java:377)
+	- locked <0x00000003afc82668> (a java.util.ArrayList)
+	at Gallery.lambda$rescan$7(Gallery.java:350)
+	at Gallery$$Lambda/0x000000e8010c1078.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@21.0.13/Thread.java:1596)
+	at java.lang.Thread.run(java.base@21.0.13/Thread.java:1583)
+
+   Locked ownable synchronizers:
+	- None
+
+"Attach Listener" #35 [79667] daemon prio=9 os_prio=31 cpu=0.34ms elapsed=0.11s tid=0x0000000b5c6c8700 nid=79667 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"VM Thread" os_prio=31 cpu=7.32ms elapsed=2.64s tid=0x0000000b5b0c5800 nid=17923 runnable  
+
+"VM Periodic Task Thread" os_prio=31 cpu=0.84ms elapsed=2.64s tid=0x0000000102a73090 nid=21251 waiting on condition  
+
+"G1 Service" os_prio=31 cpu=0.05ms elapsed=2.64s tid=0x0000000b5b0c4400 nid=16643 runnable  
+
+"G1 Refine#0" os_prio=31 cpu=0.02ms elapsed=2.64s tid=0x0000000102a6d9b0 nid=12803 runnable  
+
+"G1 Conc#0" os_prio=31 cpu=0.01ms elapsed=2.64s tid=0x0000000102a6b050 nid=12547 runnable  
+
+"G1 Main Marker" os_prio=31 cpu=0.01ms elapsed=2.64s tid=0x0000000102a6a5b0 nid=13571 runnable  
+
+"GC Thread#0" os_prio=31 cpu=0.02ms elapsed=2.64s tid=0x0000000102a69790 nid=13827 runnable  
+
+JNI global refs: 108, weak refs: 53
+
+
+child: FAIL: Sort did not complete within 2 s; confirmed deadlock=true
+----------System.err:(12/916)----------
+java.lang.AssertionError: Sort must complete while scanning. Child exit=1; inspect the EDT/loader cycle and jcmd output above
+	at GalleryTestSupport.check(GalleryTestSupport.java:30)
+	at ScanSortDeadlockTest.main(ScanSortDeadlockTest.java:49)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javatest.regtest.agent.MainWrapper$MainTask.run(MainWrapper.java:143)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+JavaTest Message: Test threw exception: java.lang.AssertionError: Sort must complete while scanning. Child exit=1; inspect the EDT/loader cycle and jcmd output above
+JavaTest Message: shutting down test
+
+STATUS:Failed.`main' threw exception: java.lang.AssertionError: Sort must complete while scanning. Child exit=1; inspect the EDT/loader cycle and jcmd output above
+----------rerun:(25/1911)*----------
+cd /Users/marek.trybus/workspace_small/jbr/work/jtreg/scratch && \\
+HOME=/Users/marek.trybus \\
+LANG=C.UTF-8 \\
+LC_ALL=C.UTF-8 \\
+LC_CTYPE=C.UTF-8 \\
+PATH=/bin:/usr/bin:/usr/sbin \\
+CLASSPATH=/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite:/Users/marek.trybus/workspace_small/jbr/suite:/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite/suite/lib:/Users/marek.trybus/workspace_small/jbr/suite/lib:/Users/marek.trybus/tools/jtreg/build/images/jtreg/lib/javatest.jar:/Users/marek.trybus/tools/jtreg/build/images/jtreg/lib/jtreg.jar \\
+    /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home/bin/java \\
+        -Dtest.vm.opts= \\
+        -Dtest.tool.vm.opts= \\
+        -Dtest.compiler.opts= \\
+        -Dtest.java.opts= \\
+        -Dtest.jdk=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home \\
+        -Dcompile.jdk=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home \\
+        -Dtest.timeout.factor=1.0 \\
+        -Dtest.root=/Users/marek.trybus/workspace_small/jbr \\
+        -Dtest.name=suite/ScanSortDeadlockTest.java \\
+        -Dtest.verbose=Verbose[p=SUMMARY,f=SUMMARY,e=SUMMARY,t=false,m=false] \\
+        -Dtest.file=/Users/marek.trybus/workspace_small/jbr/suite/ScanSortDeadlockTest.java \\
+        -Dtest.main.class=ScanSortDeadlockTest \\
+        -Dtest.src=/Users/marek.trybus/workspace_small/jbr/suite \\
+        -Dtest.src.path=/Users/marek.trybus/workspace_small/jbr/suite:/Users/marek.trybus/workspace_small/jbr/suite/lib \\
+        -Dtest.classes=/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite \\
+        -Dtest.class.path=/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite:/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite/suite/lib \\
+        com.sun.javatest.regtest.agent.MainWrapper /Users/marek.trybus/workspace_small/jbr/work/jtreg/suite/ScanSortDeadlockTest.d/main.0.jta
+result: Failed. Execution failed: `main' threw exception: java.lang.AssertionError: Sort must complete while scanning. Child exit=1; inspect the EDT/loader cycle and jcmd output above
+
+
+test result: Failed. Execution failed: `main' threw exception: java.lang.AssertionError: Sort must complete while scanning. Child exit=1; inspect the EDT/loader cycle and jcmd output above

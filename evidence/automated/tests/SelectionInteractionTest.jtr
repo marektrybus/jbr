@@ -1,0 +1,111 @@
+#Test Results (version 2)
+#Sun Nov 08 10:40:26 CET 2026
+#-----testdescription-----
+$file=/Users/marek.trybus/workspace_small/jbr/suite/SelectionInteractionTest.java
+$root=/Users/marek.trybus/workspace_small/jbr
+keywords=headful othervm
+library=/suite/lib
+maxTimeout=120
+run=USER_SPECIFIED build Gallery GalleryTestSupport GalleryUiTestSupport SortTestSupport\nUSER_SPECIFIED main/othervm/timeout\=120 SelectionInteractionTest\n
+source=SelectionInteractionTest.java
+title=Mouse and arrow keys select artworks; sorting preserves selection, title and visibility
+
+#-----environment-----
+
+#-----testresult-----
+description=file\:/Users/marek.trybus/workspace_small/jbr/suite/SelectionInteractionTest.java
+elapsed=1520 0\:00\:01.520
+end=Sun Nov 08 10\:40\:26 CET 2026
+environment=regtest
+execStatus=Passed. Execution successful
+harnessLoaderMode=Classpath Loader
+harnessVariety=Full Bundle
+hostname=192.168.100.130
+javatestOS=Mac OS X 26.7.2 (aarch64)
+javatestVersion=6.0-ea+b24-2026-10-22-${BUILT_FROM_COMMIT}
+jtregVersion=jtreg 8.4 dev 0
+script=com.sun.javatest.regtest.exec.RegressionScript
+sections=script_messages build build main
+start=Sun Nov 08 10\:40\:25 CET 2026
+test=suite/SelectionInteractionTest.java
+testJDK=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+testJDK_OS=[name\:Mac OS X,arch\:aarch64,version\:26.7.2,family\:mac,simple_arch\:aarch64,simple_version\:26.7,processors\:18,maxMemory\:51539607552,maxSwap\:0]
+testJDK_os.arch=aarch64
+testJDK_os.name=Mac OS X
+testJDK_os.version=26.7.2
+totalTime=1522
+user.name=marek.trybus
+work=/Users/marek.trybus/workspace_small/jbr/work/jtreg/suite
+
+#section:script_messages
+----------messages:(7/441)----------
+JDK under test: /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+openjdk version "21.0.13" 2026-10-20
+OpenJDK Runtime Environment Homebrew (build 21.0.13)
+OpenJDK 64-Bit Server VM Homebrew (build 21.0.13, mixed mode, sharing)
+Library /suite/lib; kind: packages
+   source directory: /Users/marek.trybus/workspace_small/jbr/suite/lib
+   class directory: /Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite/suite/lib
+
+#section:build
+----------messages:(5/298)----------
+command: build Gallery GalleryTestSupport GalleryUiTestSupport SortTestSupport
+reason: User specified action: run build Gallery GalleryTestSupport GalleryUiTestSupport SortTestSupport 
+started: Sun Nov 08 10:40:25.182 CET 2026
+finished: Sun Nov 08 10:40:25.182 CET 2026
+elapsed time (seconds): 0.0
+result: Passed. All files up to date
+
+#section:build
+----------messages:(5/194)----------
+command: build SelectionInteractionTest
+reason: Named class compiled on demand
+started: Sun Nov 08 10:40:25.182 CET 2026
+finished: Sun Nov 08 10:40:25.183 CET 2026
+elapsed time (seconds): 0.001
+result: Passed. All files up to date
+
+#section:main
+----------messages:(7/293)----------
+command: main SelectionInteractionTest
+reason: User specified action: run main/othervm/timeout=120 SelectionInteractionTest 
+started: Sun Nov 08 10:40:25.183 CET 2026
+Mode: othervm [/othervm specified]
+Process id: 79588
+finished: Sun Nov 08 10:40:26.701 CET 2026
+elapsed time (seconds): 1.518
+----------configuration:(0/0)----------
+----------System.out:(1/94)----------
+Mouse/arrow selection, both sort orders, size ties, title and visibility verified for art-001
+----------System.err:(1/15)----------
+STATUS:Passed.
+----------rerun:(25/1927)*----------
+cd /Users/marek.trybus/workspace_small/jbr/work/jtreg/scratch && \\
+HOME=/Users/marek.trybus \\
+LANG=C.UTF-8 \\
+LC_ALL=C.UTF-8 \\
+LC_CTYPE=C.UTF-8 \\
+PATH=/bin:/usr/bin:/usr/sbin \\
+CLASSPATH=/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite:/Users/marek.trybus/workspace_small/jbr/suite:/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite/suite/lib:/Users/marek.trybus/workspace_small/jbr/suite/lib:/Users/marek.trybus/tools/jtreg/build/images/jtreg/lib/javatest.jar:/Users/marek.trybus/tools/jtreg/build/images/jtreg/lib/jtreg.jar \\
+    /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home/bin/java \\
+        -Dtest.vm.opts= \\
+        -Dtest.tool.vm.opts= \\
+        -Dtest.compiler.opts= \\
+        -Dtest.java.opts= \\
+        -Dtest.jdk=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home \\
+        -Dcompile.jdk=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home \\
+        -Dtest.timeout.factor=1.0 \\
+        -Dtest.root=/Users/marek.trybus/workspace_small/jbr \\
+        -Dtest.name=suite/SelectionInteractionTest.java \\
+        -Dtest.verbose=Verbose[p=SUMMARY,f=SUMMARY,e=SUMMARY,t=false,m=false] \\
+        -Dtest.file=/Users/marek.trybus/workspace_small/jbr/suite/SelectionInteractionTest.java \\
+        -Dtest.main.class=SelectionInteractionTest \\
+        -Dtest.src=/Users/marek.trybus/workspace_small/jbr/suite \\
+        -Dtest.src.path=/Users/marek.trybus/workspace_small/jbr/suite:/Users/marek.trybus/workspace_small/jbr/suite/lib \\
+        -Dtest.classes=/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite \\
+        -Dtest.class.path=/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite:/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite/suite/lib \\
+        com.sun.javatest.regtest.agent.MainWrapper /Users/marek.trybus/workspace_small/jbr/work/jtreg/suite/SelectionInteractionTest.d/main.0.jta
+result: Passed. Execution successful
+
+
+test result: Passed. Execution successful

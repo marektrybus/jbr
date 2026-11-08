@@ -1,0 +1,8 @@
+jtreg 8.4-dev+0
+Installed in /Users/marek.trybus/tools/jtreg/build/images/jtreg/lib/jtreg.jar
+Running on platform version 21.0.13 from /opt/homebrew/Cellar/openjdk@21/21.0.13/libexec/openjdk.jdk/Contents/Home.
+Built with Java(TM) 2 SDK, Version 21.0.13 on October 22, 2026.
+JT Harness, version 6.0 ea b24 (October 22, 2026)
+Java Assembler Tools, version 9.1 ea 01 (October 22, 2026)
+TestNG: testng-7.3.0.jar, guice-5.1.0.jar, jcommander-1.82.jar
+JUnit: junit-platform-console-standalone-1.14.4.jar

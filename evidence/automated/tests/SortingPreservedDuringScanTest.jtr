@@ -1,0 +1,135 @@
+#Test Results (version 2)
+#Sun Nov 08 10:40:28 CET 2026
+#-----testdescription-----
+$file=/Users/marek.trybus/workspace_small/jbr/suite/SortingPreservedDuringScanTest.java
+$root=/Users/marek.trybus/workspace_small/jbr
+keywords=headful othervm
+library=/suite/lib
+maxTimeout=120
+run=USER_SPECIFIED build Gallery GalleryTestSupport SortTestSupport\nUSER_SPECIFIED main/othervm/timeout\=120 SortingPreservedDuringScanTest\n
+source=SortingPreservedDuringScanTest.java
+title=Size sorting selected during an active scan applies to subsequent artworks
+
+#-----environment-----
+
+#-----testresult-----
+description=file\:/Users/marek.trybus/workspace_small/jbr/suite/SortingPreservedDuringScanTest.java
+elapsed=885 0\:00\:00.885
+end=Sun Nov 08 10\:40\:28 CET 2026
+environment=regtest
+execStatus=Failed. Execution failed\: `main' threw exception\: java.lang.AssertionError\: Newly loaded artworks must follow selected size/name order; expected\=[art-002\:512, art-000\:1536, art-001\:2048]; actual\=[art-000\:1536, art-001\:2048, art-002\:512]
+harnessLoaderMode=Classpath Loader
+harnessVariety=Full Bundle
+hostname=192.168.100.130
+javatestOS=Mac OS X 26.7.2 (aarch64)
+javatestVersion=6.0-ea+b24-2026-10-22-${BUILT_FROM_COMMIT}
+jtregVersion=jtreg 8.4 dev 0
+script=com.sun.javatest.regtest.exec.RegressionScript
+sections=script_messages build build main
+start=Sun Nov 08 10\:40\:27 CET 2026
+test=suite/SortingPreservedDuringScanTest.java
+testJDK=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+testJDK_OS=[name\:Mac OS X,arch\:aarch64,version\:26.7.2,family\:mac,simple_arch\:aarch64,simple_version\:26.7,processors\:18,maxMemory\:51539607552,maxSwap\:0]
+testJDK_os.arch=aarch64
+testJDK_os.name=Mac OS X
+testJDK_os.version=26.7.2
+totalTime=885
+user.name=marek.trybus
+work=/Users/marek.trybus/workspace_small/jbr/work/jtreg/suite
+
+#section:script_messages
+----------messages:(7/441)----------
+JDK under test: /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+openjdk version "21.0.13" 2026-10-20
+OpenJDK Runtime Environment Homebrew (build 21.0.13)
+OpenJDK 64-Bit Server VM Homebrew (build 21.0.13, mixed mode, sharing)
+Library /suite/lib; kind: packages
+   source directory: /Users/marek.trybus/workspace_small/jbr/suite/lib
+   class directory: /Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite/suite/lib
+
+#section:build
+----------messages:(5/256)----------
+command: build Gallery GalleryTestSupport SortTestSupport
+reason: User specified action: run build Gallery GalleryTestSupport SortTestSupport 
+started: Sun Nov 08 10:40:27.621 CET 2026
+finished: Sun Nov 08 10:40:27.621 CET 2026
+elapsed time (seconds): 0.0
+result: Passed. All files up to date
+
+#section:build
+----------messages:(5/198)----------
+command: build SortingPreservedDuringScanTest
+reason: Named class compiled on demand
+started: Sun Nov 08 10:40:27.621 CET 2026
+finished: Sun Nov 08 10:40:27.621 CET 2026
+elapsed time (seconds): 0.0
+result: Passed. All files up to date
+
+#section:main
+----------messages:(7/305)----------
+command: main SortingPreservedDuringScanTest
+reason: User specified action: run main/othervm/timeout=120 SortingPreservedDuringScanTest 
+started: Sun Nov 08 10:40:27.621 CET 2026
+Mode: othervm [/othervm specified]
+Process id: 79782
+finished: Sun Nov 08 10:40:28.503 CET 2026
+elapsed time (seconds): 0.882
+----------configuration:(0/0)----------
+----------System.out:(3/146)----------
+Fixture count=3; request Sort after 2 artworks
+Clicking Sort during scan: loaded=2/3
+Checking final size/name order after 1 additional artwork(s)
+----------System.err:(23/2065)----------
+java.lang.AssertionError: Newly loaded artworks must follow selected size/name order; expected=[art-002:512, art-000:1536, art-001:2048]; actual=[art-000:1536, art-001:2048, art-002:512]
+	at GalleryTestSupport.check(GalleryTestSupport.java:30)
+	at SortTestSupport.assertSizeOrder(SortTestSupport.java:13)
+	at SortingPreservedDuringScanTest.lambda$main$2(SortingPreservedDuringScanTest.java:89)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+
+JavaTest Message: Test threw exception: java.lang.AssertionError: Newly loaded artworks must follow selected size/name order; expected=[art-002:512, art-000:1536, art-001:2048]; actual=[art-000:1536, art-001:2048, art-002:512]
+JavaTest Message: shutting down test
+
+STATUS:Failed.`main' threw exception: java.lang.AssertionError: Newly loaded artworks must follow selected size/name order; expected=[art-002:512, art-000:1536, art-001:2048]; actual=[art-000:1536, art-001:2048, art-002:512]
+----------rerun:(25/1951)*----------
+cd /Users/marek.trybus/workspace_small/jbr/work/jtreg/scratch && \\
+HOME=/Users/marek.trybus \\
+LANG=C.UTF-8 \\
+LC_ALL=C.UTF-8 \\
+LC_CTYPE=C.UTF-8 \\
+PATH=/bin:/usr/bin:/usr/sbin \\
+CLASSPATH=/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite:/Users/marek.trybus/workspace_small/jbr/suite:/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite/suite/lib:/Users/marek.trybus/workspace_small/jbr/suite/lib:/Users/marek.trybus/tools/jtreg/build/images/jtreg/lib/javatest.jar:/Users/marek.trybus/tools/jtreg/build/images/jtreg/lib/jtreg.jar \\
+    /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home/bin/java \\
+        -Dtest.vm.opts= \\
+        -Dtest.tool.vm.opts= \\
+        -Dtest.compiler.opts= \\
+        -Dtest.java.opts= \\
+        -Dtest.jdk=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home \\
+        -Dcompile.jdk=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home \\
+        -Dtest.timeout.factor=1.0 \\
+        -Dtest.root=/Users/marek.trybus/workspace_small/jbr \\
+        -Dtest.name=suite/SortingPreservedDuringScanTest.java \\
+        -Dtest.verbose=Verbose[p=SUMMARY,f=SUMMARY,e=SUMMARY,t=false,m=false] \\
+        -Dtest.file=/Users/marek.trybus/workspace_small/jbr/suite/SortingPreservedDuringScanTest.java \\
+        -Dtest.main.class=SortingPreservedDuringScanTest \\
+        -Dtest.src=/Users/marek.trybus/workspace_small/jbr/suite \\
+        -Dtest.src.path=/Users/marek.trybus/workspace_small/jbr/suite:/Users/marek.trybus/workspace_small/jbr/suite/lib \\
+        -Dtest.classes=/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite \\
+        -Dtest.class.path=/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite:/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite/suite/lib \\
+        com.sun.javatest.regtest.agent.MainWrapper /Users/marek.trybus/workspace_small/jbr/work/jtreg/suite/SortingPreservedDuringScanTest.d/main.0.jta
+result: Failed. Execution failed: `main' threw exception: java.lang.AssertionError: Newly loaded artworks must follow selected size/name order; expected=[art-002:512, art-000:1536, art-001:2048]; actual=[art-000:1536, art-001:2048, art-002:512]
+
+
+test result: Failed. Execution failed: `main' threw exception: java.lang.AssertionError: Newly loaded artworks must follow selected size/name order; expected=[art-002:512, art-000:1536, art-001:2048]; actual=[art-000:1536, art-001:2048, art-002:512]

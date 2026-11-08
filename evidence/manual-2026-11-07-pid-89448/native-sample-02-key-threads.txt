@@ -1,0 +1,24 @@
+Derived excerpt from native-sample-02.txt; full raw sample is preserved separately.
+
+    802 Thread_1152937: Java: AWT-EventQueue-0
+    + 802 ???  (in <unknown binary>)  [0x1900116c000]
+    +   802 ???  (in <unknown binary>)  [0x11b14f6b8]
+    +     802 SharedRuntime::complete_monitor_locking_C(oopDesc*, BasicLock*, JavaThread*)  (in libjvm.dylib) + 76  [0x10ac89b08]
+    +       802 SharedRuntime::monitor_enter_helper(oopDesc*, BasicLock*, JavaThread*)  (in libjvm.dylib) + 168  [0x10ac89aa0]
+    +         802 ObjectSynchronizer::enter(Handle, BasicLock*, JavaThread*)  (in libjvm.dylib) + 384  [0x10ad4fc30]
+    +           802 ObjectMonitor::enter(JavaThread*)  (in libjvm.dylib) + 748  [0x10ac02dac]
+    +             802 ObjectMonitor::EnterI(JavaThread*)  (in libjvm.dylib) + 476  [0x10ac033bc]
+    +               802 PlatformEvent::park_nanos(long)  (in libjvm.dylib) + 140  [0x10ac1ee38]
+    +                 802 _pthread_cond_wait  (in libsystem_pthread.dylib) + 980  [0x18b6e9128]
+    +                   802 __psynch_cvwait  (in libsystem_kernel.dylib) + 8  [0x18b6a850c]
+
+    802 Thread_1164697: Java: gallery-loader
+    + 802 ???  (in <unknown binary>)  [0x6b50]
+    +   802 ???  (in <unknown binary>)  [0x11bb8e3c8]
+    +     802 ???  (in <unknown binary>)  [0x11b89845c]
+    +       802 JVM_MonitorWait  (in libjvm.dylib) + 312  [0x10aa0a4c8]
+    +         802 ObjectSynchronizer::wait(Handle, long, JavaThread*)  (in libjvm.dylib) + 268  [0x10ad50914]
+    +           802 ObjectMonitor::wait(long, bool, JavaThread*)  (in libjvm.dylib) + 1180  [0x10ac04390]
+    +             802 PlatformEvent::park()  (in libjvm.dylib) + 108  [0x10ac1ecdc]
+    +               802 _pthread_cond_wait  (in libsystem_pthread.dylib) + 980  [0x18b6e9128]
+    +                 802 __psynch_cvwait  (in libsystem_kernel.dylib) + 8  [0x18b6a850c]

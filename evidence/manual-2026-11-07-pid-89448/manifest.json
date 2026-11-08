@@ -1,0 +1,44 @@
+{
+  "pid": 89448,
+  "capture_method": "macOS Activity Monitor: Sample Process, then Refresh; native sampling via /usr/bin/sample",
+  "application_thread_names": [
+    "AWT-EventQueue-0",
+    "gallery-loader"
+  ],
+  "timezone": "Europe/Warsaw (UTC+01:00)",
+  "process_terminated_by_capture": false,
+  "samples": [
+    {
+      "file": "native-sample-01.txt",
+      "sha256": "0d6c6c83850f708ee14fee1b8d08b7dc6523729b3c5804a05c6b430a3ffce904",
+      "bytes": 325135,
+      "capture_time": "2026-11-07 16:25:31.139 +0100",
+      "thread_excerpts": {
+        "AWT-EventQueue-0": {
+          "start_line": 652,
+          "end_line": 662
+        },
+        "gallery-loader": {
+          "start_line": 790,
+          "end_line": 799
+        }
+      }
+    },
+    {
+      "file": "native-sample-02.txt",
+      "sha256": "2128f0a1718c035793b66fcea5d1f81f9c34fb2f87223d10f225aee81b4502bf",
+      "bytes": 286876,
+      "capture_time": "2026-11-07 16:26:09.324 +0100",
+      "thread_excerpts": {
+        "AWT-EventQueue-0": {
+          "start_line": 531,
+          "end_line": 541
+        },
+        "gallery-loader": {
+          "start_line": 669,
+          "end_line": 678
+        }
+      }
+    }
+  ]
+}

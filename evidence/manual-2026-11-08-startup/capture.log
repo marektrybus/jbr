@@ -1,0 +1,14 @@
+Captured at: 2026-11-08T12:29:34.541648+01:00[Europe/Warsaw]
+Entry point: Gallery.main(new String[] {"400"})
+Java: 21.0.13
+OS: Mac OS X 26.7.2
+Look and feel: com.apple.laf.AquaLookAndFeel
+Progress UI: com.apple.laf.AquaProgressBarUI
+Progress: 400/400; text=Done
+Status: 400 artworks, 1072.2 Mpx, 0 previews cached
+Progress size: java.awt.Dimension[width=146,height=20]
+Foreground: javax.swing.plaf.ColorUIResource[r=0,g=0,b=0]; background: com.apple.laf.AquaImageFactory$SystemColorProxy[r=238,g=238,b=238]
+Selection foreground: javax.swing.plaf.ColorUIResource[r=0,g=0,b=0]
+Selection background: javax.swing.plaf.ColorUIResource[r=255,g=255,b=255]
+Screen transform: AffineTransform[[2.0, 0.0, 0.0], [0.0, 2.0, 0.0]]
+Capture method: Swing component printAll on EDT, native logical dimensions; not an OS screenshot.

@@ -1,0 +1,15 @@
+suite/DesktopEnvironmentTest.java          Passed. Execution successful
+suite/InfoPopupPositionTest.java           Failed. Execution failed: `main' threw exception: java.lang.AssertionError: Info popup must meet the selected cell's bottom-left screen corner (clamped): expected java.awt.Point[x=64,y=288] but got java.awt.Point[x=0,y=130]
+suite/LifecycleTest.java                   Passed. Execution successful
+suite/PreviewResponsivenessTest.java       Passed. Execution successful
+suite/RescanStateTest.java                 Passed. Execution successful
+suite/ScanProgressEdtTest.java             Failed. Execution failed: `main' threw exception: java.lang.AssertionError: Progress must be updated on EDT; observed [Swing progress mutation callback on gallery-loader, Swing progress mutation callback on gallery-loader]
+suite/ScanSortDeadlockTest.java            Failed. Execution failed: `main' threw exception: java.lang.AssertionError: Sort must complete while scanning. Child exit=1; inspect the EDT/loader cycle and jcmd output above
+suite/SelectionInteractionTest.java        Passed. Execution successful
+suite/SortAfterRescanTest.java             Failed. Execution failed: `main' threw exception: java.lang.AssertionError: Newly loaded artworks must follow selected size/name order; expected=[art-002:512, art-000:1536, art-001:2048]; actual=[art-000:1536, art-001:2048, art-002:512]
+suite/SortingPreservedDuringScanTest.java  Failed. Execution failed: `main' threw exception: java.lang.AssertionError: Newly loaded artworks must follow selected size/name order; expected=[art-002:512, art-000:1536, art-001:2048]; actual=[art-000:1536, art-001:2048, art-002:512]
+suite/SourceIntegrityTest.java             Passed. Execution successful
+suite/StatusCacheTest.java                 Passed. Execution successful
+suite/StatusDuringScanTest.java            Passed. Execution successful
+suite/TooltipInfoDetailsTest.java          Passed. Execution successful
+suite/WindowPlacementTest.java             Failed. Execution failed: `main' threw exception: java.lang.AssertionError: Window must be centered in usable screen: expected top-left java.awt.Point[x=459,y=223] but got java.awt.Point[x=919,y=416]

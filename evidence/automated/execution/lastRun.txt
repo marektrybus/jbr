@@ -1,0 +1,6 @@
+#Last test run info
+#Sun Nov 08 10:40:36 CET 2026
+configName=regtest
+finishTime=1794130836399
+startTime=1794130815323
+testURLs=suite/DesktopEnvironmentTest.java suite/InfoPopupPositionTest.java suite/LifecycleTest.java suite/PreviewResponsivenessTest.java suite/RescanStateTest.java suite/ScanProgressEdtTest.java suite/ScanSortDeadlockTest.java suite/SelectionInteractionTest.java suite/SortAfterRescanTest.java suite/SortingPreservedDuringScanTest.java suite/SourceIntegrityTest.java suite/StatusCacheTest.java suite/StatusDuringScanTest.java suite/TooltipInfoDetailsTest.java suite/WindowPlacementTest.java

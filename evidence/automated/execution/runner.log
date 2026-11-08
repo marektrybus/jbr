@@ -1,0 +1,19 @@
+Passed: suite/DesktopEnvironmentTest.java
+FAILED: suite/InfoPopupPositionTest.java
+Passed: suite/LifecycleTest.java
+Passed: suite/PreviewResponsivenessTest.java
+Passed: suite/RescanStateTest.java
+FAILED: suite/ScanProgressEdtTest.java
+FAILED: suite/ScanSortDeadlockTest.java
+Passed: suite/SelectionInteractionTest.java
+FAILED: suite/SortAfterRescanTest.java
+FAILED: suite/SortingPreservedDuringScanTest.java
+Passed: suite/SourceIntegrityTest.java
+Passed: suite/StatusCacheTest.java
+Passed: suite/StatusDuringScanTest.java
+Passed: suite/TooltipInfoDetailsTest.java
+FAILED: suite/WindowPlacementTest.java
+Test results: passed: 9; failed: 6
+Report written to /Users/marek.trybus/workspace_small/jbr/work/jtreport/html/report.html
+Results written to /Users/marek.trybus/workspace_small/jbr/work/jtreg
+Error: Some tests failed or other problems occurred.

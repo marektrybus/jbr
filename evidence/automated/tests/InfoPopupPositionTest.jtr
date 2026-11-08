@@ -1,0 +1,132 @@
+#Test Results (version 2)
+#Sun Nov 08 10:40:17 CET 2026
+#-----testdescription-----
+$file=/Users/marek.trybus/workspace_small/jbr/suite/InfoPopupPositionTest.java
+$root=/Users/marek.trybus/workspace_small/jbr
+keywords=headful othervm
+library=/suite/lib
+maxTimeout=120
+run=USER_SPECIFIED build Gallery GalleryTestSupport\nUSER_SPECIFIED main/othervm/timeout\=120 InfoPopupPositionTest\n
+source=InfoPopupPositionTest.java
+title=Info popup follows the selected cell in screen coordinates after moving the frame
+
+#-----environment-----
+
+#-----testresult-----
+description=file\:/Users/marek.trybus/workspace_small/jbr/suite/InfoPopupPositionTest.java
+elapsed=1318 0\:00\:01.318
+end=Sun Nov 08 10\:40\:17 CET 2026
+environment=regtest
+execStatus=Failed. Execution failed\: `main' threw exception\: java.lang.AssertionError\: Info popup must meet the selected cell's bottom-left screen corner (clamped)\: expected java.awt.Point[x\=64,y\=288] but got java.awt.Point[x\=0,y\=130]
+harnessLoaderMode=Classpath Loader
+harnessVariety=Full Bundle
+hostname=192.168.100.130
+javatestOS=Mac OS X 26.7.2 (aarch64)
+javatestVersion=6.0-ea+b24-2026-10-22-${BUILT_FROM_COMMIT}
+jtregVersion=jtreg 8.4 dev 0
+script=com.sun.javatest.regtest.exec.RegressionScript
+sections=script_messages build build main
+start=Sun Nov 08 10\:40\:16 CET 2026
+test=suite/InfoPopupPositionTest.java
+testJDK=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+testJDK_OS=[name\:Mac OS X,arch\:aarch64,version\:26.7.2,family\:mac,simple_arch\:aarch64,simple_version\:26.7,processors\:18,maxMemory\:51539607552,maxSwap\:0]
+testJDK_os.arch=aarch64
+testJDK_os.name=Mac OS X
+testJDK_os.version=26.7.2
+totalTime=1319
+user.name=marek.trybus
+work=/Users/marek.trybus/workspace_small/jbr/work/jtreg/suite
+
+#section:script_messages
+----------messages:(7/441)----------
+JDK under test: /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+openjdk version "21.0.13" 2026-10-20
+OpenJDK Runtime Environment Homebrew (build 21.0.13)
+OpenJDK 64-Bit Server VM Homebrew (build 21.0.13, mixed mode, sharing)
+Library /suite/lib; kind: packages
+   source directory: /Users/marek.trybus/workspace_small/jbr/suite/lib
+   class directory: /Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite/suite/lib
+
+#section:build
+----------messages:(5/224)----------
+command: build Gallery GalleryTestSupport
+reason: User specified action: run build Gallery GalleryTestSupport 
+started: Sun Nov 08 10:40:16.390 CET 2026
+finished: Sun Nov 08 10:40:16.390 CET 2026
+elapsed time (seconds): 0.0
+result: Passed. All files up to date
+
+#section:build
+----------messages:(5/191)----------
+command: build InfoPopupPositionTest
+reason: Named class compiled on demand
+started: Sun Nov 08 10:40:16.390 CET 2026
+finished: Sun Nov 08 10:40:16.391 CET 2026
+elapsed time (seconds): 0.001
+result: Passed. All files up to date
+
+#section:main
+----------messages:(7/287)----------
+command: main InfoPopupPositionTest
+reason: User specified action: run main/othervm/timeout=120 InfoPopupPositionTest 
+started: Sun Nov 08 10:40:16.391 CET 2026
+Mode: othervm [/othervm specified]
+Process id: 79570
+finished: Sun Nov 08 10:40:17.706 CET 2026
+elapsed time (seconds): 1.315
+----------configuration:(0/0)----------
+----------System.out:(1/306)----------
+cell=java.awt.Rectangle[x=0,y=0,width=112,height=130]; listOnScreen=java.awt.Point[x=64,y=158]; anchor=java.awt.Point[x=64,y=288]; usable=java.awt.Rectangle[x=0,y=30,width=1920,height=972]; popup=java.awt.Rectangle[x=0,y=130,width=185,height=78]; expected=java.awt.Point[x=64,y=288]; tolerance=2 AWT units
+----------System.err:(22/1947)----------
+java.lang.AssertionError: Info popup must meet the selected cell's bottom-left screen corner (clamped): expected java.awt.Point[x=64,y=288] but got java.awt.Point[x=0,y=130]
+	at GalleryTestSupport.check(GalleryTestSupport.java:30)
+	at InfoPopupPositionTest.lambda$main$1(InfoPopupPositionTest.java:45)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+
+JavaTest Message: Test threw exception: java.lang.AssertionError: Info popup must meet the selected cell's bottom-left screen corner (clamped): expected java.awt.Point[x=64,y=288] but got java.awt.Point[x=0,y=130]
+JavaTest Message: shutting down test
+
+STATUS:Failed.`main' threw exception: java.lang.AssertionError: Info popup must meet the selected cell's bottom-left screen corner (clamped): expected java.awt.Point[x=64,y=288] but got java.awt.Point[x=0,y=130]
+----------rerun:(25/1915)*----------
+cd /Users/marek.trybus/workspace_small/jbr/work/jtreg/scratch && \\
+HOME=/Users/marek.trybus \\
+LANG=C.UTF-8 \\
+LC_ALL=C.UTF-8 \\
+LC_CTYPE=C.UTF-8 \\
+PATH=/bin:/usr/bin:/usr/sbin \\
+CLASSPATH=/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite:/Users/marek.trybus/workspace_small/jbr/suite:/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite/suite/lib:/Users/marek.trybus/workspace_small/jbr/suite/lib:/Users/marek.trybus/tools/jtreg/build/images/jtreg/lib/javatest.jar:/Users/marek.trybus/tools/jtreg/build/images/jtreg/lib/jtreg.jar \\
+    /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home/bin/java \\
+        -Dtest.vm.opts= \\
+        -Dtest.tool.vm.opts= \\
+        -Dtest.compiler.opts= \\
+        -Dtest.java.opts= \\
+        -Dtest.jdk=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home \\
+        -Dcompile.jdk=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home \\
+        -Dtest.timeout.factor=1.0 \\
+        -Dtest.root=/Users/marek.trybus/workspace_small/jbr \\
+        -Dtest.name=suite/InfoPopupPositionTest.java \\
+        -Dtest.verbose=Verbose[p=SUMMARY,f=SUMMARY,e=SUMMARY,t=false,m=false] \\
+        -Dtest.file=/Users/marek.trybus/workspace_small/jbr/suite/InfoPopupPositionTest.java \\
+        -Dtest.main.class=InfoPopupPositionTest \\
+        -Dtest.src=/Users/marek.trybus/workspace_small/jbr/suite \\
+        -Dtest.src.path=/Users/marek.trybus/workspace_small/jbr/suite:/Users/marek.trybus/workspace_small/jbr/suite/lib \\
+        -Dtest.classes=/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite \\
+        -Dtest.class.path=/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite:/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite/suite/lib \\
+        com.sun.javatest.regtest.agent.MainWrapper /Users/marek.trybus/workspace_small/jbr/work/jtreg/suite/InfoPopupPositionTest.d/main.0.jta
+result: Failed. Execution failed: `main' threw exception: java.lang.AssertionError: Info popup must meet the selected cell's bottom-left screen corner (clamped): expected java.awt.Point[x=64,y=288] but got java.awt.Point[x=0,y=130]
+
+
+test result: Failed. Execution failed: `main' threw exception: java.lang.AssertionError: Info popup must meet the selected cell's bottom-left screen corner (clamped): expected java.awt.Point[x=64,y=288] but got java.awt.Point[x=0,y=130]

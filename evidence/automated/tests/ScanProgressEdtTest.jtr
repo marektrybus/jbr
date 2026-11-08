@@ -1,0 +1,148 @@
+#Test Results (version 2)
+#Sun Nov 08 10:40:22 CET 2026
+#-----testdescription-----
+$file=/Users/marek.trybus/workspace_small/jbr/suite/ScanProgressEdtTest.java
+$root=/Users/marek.trybus/workspace_small/jbr
+keywords=headful othervm
+library=/suite/lib
+maxTimeout=120
+run=USER_SPECIFIED build Gallery GalleryTestSupport\nUSER_SPECIFIED main/othervm/timeout\=120 ScanProgressEdtTest\n
+source=ScanProgressEdtTest.java
+title=Scan progress value and completion text are updated on the Swing EDT
+
+#-----environment-----
+
+#-----testresult-----
+description=file\:/Users/marek.trybus/workspace_small/jbr/suite/ScanProgressEdtTest.java
+elapsed=897 0\:00\:00.897
+end=Sun Nov 08 10\:40\:22 CET 2026
+environment=regtest
+execStatus=Failed. Execution failed\: `main' threw exception\: java.lang.AssertionError\: Progress must be updated on EDT; observed [Swing progress mutation callback on gallery-loader, Swing progress mutation callback on gallery-loader]
+harnessLoaderMode=Classpath Loader
+harnessVariety=Full Bundle
+hostname=192.168.100.130
+javatestOS=Mac OS X 26.7.2 (aarch64)
+javatestVersion=6.0-ea+b24-2026-10-22-${BUILT_FROM_COMMIT}
+jtregVersion=jtreg 8.4 dev 0
+script=com.sun.javatest.regtest.exec.RegressionScript
+sections=script_messages build build main
+start=Sun Nov 08 10\:40\:21 CET 2026
+test=suite/ScanProgressEdtTest.java
+testJDK=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+testJDK_OS=[name\:Mac OS X,arch\:aarch64,version\:26.7.2,family\:mac,simple_arch\:aarch64,simple_version\:26.7,processors\:18,maxMemory\:51539607552,maxSwap\:0]
+testJDK_os.arch=aarch64
+testJDK_os.name=Mac OS X
+testJDK_os.version=26.7.2
+totalTime=897
+user.name=marek.trybus
+work=/Users/marek.trybus/workspace_small/jbr/work/jtreg/suite
+
+#section:script_messages
+----------messages:(7/441)----------
+JDK under test: /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home
+openjdk version "21.0.13" 2026-10-20
+OpenJDK Runtime Environment Homebrew (build 21.0.13)
+OpenJDK 64-Bit Server VM Homebrew (build 21.0.13, mixed mode, sharing)
+Library /suite/lib; kind: packages
+   source directory: /Users/marek.trybus/workspace_small/jbr/suite/lib
+   class directory: /Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite/suite/lib
+
+#section:build
+----------messages:(5/224)----------
+command: build Gallery GalleryTestSupport
+reason: User specified action: run build Gallery GalleryTestSupport 
+started: Sun Nov 08 10:40:21.167 CET 2026
+finished: Sun Nov 08 10:40:21.167 CET 2026
+elapsed time (seconds): 0.0
+result: Passed. All files up to date
+
+#section:build
+----------messages:(5/187)----------
+command: build ScanProgressEdtTest
+reason: Named class compiled on demand
+started: Sun Nov 08 10:40:21.167 CET 2026
+finished: Sun Nov 08 10:40:21.167 CET 2026
+elapsed time (seconds): 0.0
+result: Passed. All files up to date
+
+#section:main
+----------messages:(7/283)----------
+command: main ScanProgressEdtTest
+reason: User specified action: run main/othervm/timeout=120 ScanProgressEdtTest 
+started: Sun Nov 08 10:40:21.167 CET 2026
+Mode: othervm [/othervm specified]
+Process id: 79577
+finished: Sun Nov 08 10:40:22.061 CET 2026
+elapsed time (seconds): 0.894
+----------configuration:(0/0)----------
+----------System.out:(25/1833)----------
+Swing progress mutation callback on gallery-loader
+    at java.base/java.lang.Thread.getStackTrace(Thread.java:2451)
+    at ScanProgressEdtTest.lambda$main$0(ScanProgressEdtTest.java:29)
+    at ScanProgressEdtTest.lambda$main$1(ScanProgressEdtTest.java:32)
+    at java.desktop/javax.swing.JProgressBar.fireStateChanged(JProgressBar.java:722)
+    at java.desktop/javax.swing.JProgressBar$ModelListener.stateChanged(JProgressBar.java:643)
+    at java.desktop/javax.swing.DefaultBoundedRangeModel.fireStateChanged(DefaultBoundedRangeModel.java:376)
+    at java.desktop/javax.swing.DefaultBoundedRangeModel.setRangeProperties(DefaultBoundedRangeModel.java:314)
+    at java.desktop/javax.swing.DefaultBoundedRangeModel.setValue(DefaultBoundedRangeModel.java:175)
+    at java.desktop/javax.swing.JProgressBar.setValue(JProgressBar.java:837)
+    at Gallery.scan(Gallery.java:384)
+    at Gallery.lambda$rescan$7(Gallery.java:350)
+    at java.base/java.lang.Thread.run(Thread.java:1583)
+Swing progress mutation callback on gallery-loader
+    at java.base/java.lang.Thread.getStackTrace(Thread.java:2451)
+    at ScanProgressEdtTest.lambda$main$0(ScanProgressEdtTest.java:29)
+    at ScanProgressEdtTest.lambda$main$2(ScanProgressEdtTest.java:34)
+    at java.desktop/java.beans.PropertyChangeSupport.fire(PropertyChangeSupport.java:343)
+    at java.desktop/java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:336)
+    at java.desktop/java.beans.PropertyChangeSupport.firePropertyChange(PropertyChangeSupport.java:268)
+    at java.desktop/java.awt.Component.firePropertyChange(Component.java:8717)
+    at java.desktop/javax.swing.JProgressBar.setString(JProgressBar.java:512)
+    at Gallery.scan(Gallery.java:386)
+    at Gallery.lambda$rescan$7(Gallery.java:350)
+    at java.base/java.lang.Thread.run(Thread.java:1583)
+----------System.err:(14/1178)----------
+java.lang.AssertionError: Progress must be updated on EDT; observed [Swing progress mutation callback on gallery-loader, Swing progress mutation callback on gallery-loader]
+	at GalleryTestSupport.check(GalleryTestSupport.java:30)
+	at ScanProgressEdtTest.lambda$main$4(ScanProgressEdtTest.java:42)
+	at GalleryTestSupport.run(GalleryTestSupport.java:137)
+	at ScanProgressEdtTest.main(ScanProgressEdtTest.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javatest.regtest.agent.MainWrapper$MainTask.run(MainWrapper.java:143)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+JavaTest Message: Test threw exception: java.lang.AssertionError: Progress must be updated on EDT; observed [Swing progress mutation callback on gallery-loader, Swing progress mutation callback on gallery-loader]
+JavaTest Message: shutting down test
+
+STATUS:Failed.`main' threw exception: java.lang.AssertionError: Progress must be updated on EDT; observed [Swing progress mutation callback on gallery-loader, Swing progress mutation callback on gallery-loader]
+----------rerun:(25/1907)*----------
+cd /Users/marek.trybus/workspace_small/jbr/work/jtreg/scratch && \\
+HOME=/Users/marek.trybus \\
+LANG=C.UTF-8 \\
+LC_ALL=C.UTF-8 \\
+LC_CTYPE=C.UTF-8 \\
+PATH=/bin:/usr/bin:/usr/sbin \\
+CLASSPATH=/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite:/Users/marek.trybus/workspace_small/jbr/suite:/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite/suite/lib:/Users/marek.trybus/workspace_small/jbr/suite/lib:/Users/marek.trybus/tools/jtreg/build/images/jtreg/lib/javatest.jar:/Users/marek.trybus/tools/jtreg/build/images/jtreg/lib/jtreg.jar \\
+    /opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home/bin/java \\
+        -Dtest.vm.opts= \\
+        -Dtest.tool.vm.opts= \\
+        -Dtest.compiler.opts= \\
+        -Dtest.java.opts= \\
+        -Dtest.jdk=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home \\
+        -Dcompile.jdk=/opt/homebrew/opt/openjdk@21/libexec/openjdk.jdk/Contents/Home \\
+        -Dtest.timeout.factor=1.0 \\
+        -Dtest.root=/Users/marek.trybus/workspace_small/jbr \\
+        -Dtest.name=suite/ScanProgressEdtTest.java \\
+        -Dtest.verbose=Verbose[p=SUMMARY,f=SUMMARY,e=SUMMARY,t=false,m=false] \\
+        -Dtest.file=/Users/marek.trybus/workspace_small/jbr/suite/ScanProgressEdtTest.java \\
+        -Dtest.main.class=ScanProgressEdtTest \\
+        -Dtest.src=/Users/marek.trybus/workspace_small/jbr/suite \\
+        -Dtest.src.path=/Users/marek.trybus/workspace_small/jbr/suite:/Users/marek.trybus/workspace_small/jbr/suite/lib \\
+        -Dtest.classes=/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite \\
+        -Dtest.class.path=/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite:/Users/marek.trybus/workspace_small/jbr/work/jtreg/classes/suite/suite/lib \\
+        com.sun.javatest.regtest.agent.MainWrapper /Users/marek.trybus/workspace_small/jbr/work/jtreg/suite/ScanProgressEdtTest.d/main.0.jta
+result: Failed. Execution failed: `main' threw exception: java.lang.AssertionError: Progress must be updated on EDT; observed [Swing progress mutation callback on gallery-loader, Swing progress mutation callback on gallery-loader]
+
+
+test result: Failed. Execution failed: `main' threw exception: java.lang.AssertionError: Progress must be updated on EDT; observed [Swing progress mutation callback on gallery-loader, Swing progress mutation callback on gallery-loader]

@@ -1,0 +1,15 @@
+.DS_Store
+work/
+*.class
+*.jfr
+*.hprof
+hs_err_pid*.log
+# Only reviewed, intentionally selected evidence belongs in Git.
+evidence/raw/
+
+# Local IDE configuration and alternate jtreg output directories.
+.idea/
+*.iml
+/JTwork/
+/JTreport/
+/out/
